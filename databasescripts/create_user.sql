@@ -1,0 +1,11 @@
+BEGIN
+  EXECUTE IMMEDIATE 'DROP USER student CASCADE';
+EXCEPTION
+  WHEN OTHERS THEN
+    IF SQLCODE != -1918 THEN
+      RAISE;
+    END IF;
+END;
+/
+CREATE USER student identified by "student";
+GRANT CONNECT, RESOURCE, DBA TO student;
