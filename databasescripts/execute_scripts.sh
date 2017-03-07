@@ -6,7 +6,7 @@ set heading off
 @create_user.sql
 @drop_tables.sql
 @create_tables.sql
-@insert_product.sql
 @insert_product_category.sql
+@insert_product.sql
 exit;
 EOF
