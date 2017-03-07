@@ -8,5 +8,6 @@ set heading off
 @create_tables.sql
 @insert_product_category.sql
 @insert_product.sql
+@insert_customer.sql
 exit;
 EOF
