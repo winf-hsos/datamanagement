@@ -1,5 +1,5 @@
 -- 3 = Softdrinks
-INSERT INTO student.product (id, name, bottle_size_liters, bottles_per_package, age_restriction, alcohol_percent, product_category) VALUES (1, 'Coca Cola', 1, 12, 11.99, 0, 0, null);
+INSERT INTO student.product (id, name, bottle_size_liters, bottles_per_package,  price_per_package, age_restriction, alcohol_percent, product_category) VALUES (1, 'Coca Cola', 1, 12, 11.99, 0, 0, null);
 
 
 /*
