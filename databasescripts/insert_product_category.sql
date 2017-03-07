@@ -1,19 +1,14 @@
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(1, null, 'Getränke', 'Top-Kategorie für Getränke');
-
--- Alkoholfreie Getränke
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(2, 1, 'Alkoholfreie Getränke', 'Alles ohne Alkohol');
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(3, 2, 'Softdrinks', 'Limonadenartige Getränke');
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(4, 2, 'Warme Getränke', 'Warme Getränke wie z.B. Kaffee, Tee');
-
--- Alkoholische Getränke
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(5, 1, 'Alkoholische Getränke', 'Getränke mit Alkoholgehalt');
-
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(6, 5, 'Biere', 'Alle Arten von Bieren');
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(7, 5, 'Weine', 'Alle Weine');
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(8, 5, 'Spirituosen', 'Getränke mit einem höheren Alkoholgehalt');
-
--- Biere
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(9, 6, 'Pilsener', 'Alle Pilsener Biere');
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(10, 6, 'Weizenbiere', 'Alle Weizenbiere');
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(11, 6, 'IPAs', 'Kategorie für Imperial Pale Ale');
-INSERT INTO STUDENT.PRODUCT_CATEGORY (ID, PARENT_ID, NAME, DESCRIPTION) VALUES(12, 6, 'Kölsch', 'Kategorie für Biere nach Kölscher Brauart');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (1, null, 'Getränke', 'Top-Kategorie für Getränke');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (2, 1, 'Alkoholfreie Getränke', 'Alles ohne Alkohol');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (3, 2, 'Softdrinks', 'Limonadenartige Getränke');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (4, 1, 'Alkoholische Getränke', 'Getränke mit Alkoholgehalt');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (5, 4, 'Biere', 'Alle Arten von Bieren');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (6, 4, 'Weine', 'Alle Weine');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (7, 4, 'Spirituosen', 'Getränke mit einem höheren Alkoholgehalt');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (8, 5, 'Pilsener', 'Alle Bier nach Pilsener Brauart');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (9, 5, 'Weizenbiere', 'Alle Weizenbiere');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (10, 5, 'IPAs', 'Kategorie für Imperial Pale Ale');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (11, 5, 'Kölsch', 'Kategorie für Biere nach Kölscher Brauart');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (12, 4, 'Liköre', 'Alle Liköre');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (13, 4, 'Schnäpse', 'Alle gebrannten Schnäpse');
+INSERT INTO student.product_category (id, parent_id, name, description) VALUES (14, 5, 'Stouts', 'Alle Stouts');
