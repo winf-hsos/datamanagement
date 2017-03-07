@@ -9,5 +9,6 @@ set heading off
 @insert_product_category.sql
 @insert_product.sql
 @insert_customer.sql
+@insert_sales.sql
 exit;
 EOF

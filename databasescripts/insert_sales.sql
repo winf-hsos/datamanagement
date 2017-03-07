@@ -1,0 +1,9 @@
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (1, TO_DATE('2017-03-03', 'yyyy-mm-dd'), 'R001-053', 0.0);
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (1, TO_DATE('2017-03-10', 'yyyy-mm-dd'), 'R001-054', 0.0);
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (2, TO_DATE('2017-03-02', 'yyyy-mm-dd'), 'R002-012', 0.01);
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (2, TO_DATE('2017-03-09', 'yyyy-mm-dd'), 'R002-014', 0.01);
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (2, TO_DATE('2017-02-27', 'yyyy-mm-dd'), 'R002-009', 0.005);
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (7, TO_DATE('2017-02-28', 'yyyy-mm-dd'), 'R007-001', 0.05);
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (7, TO_DATE('2017-03-01', 'yyyy-mm-dd'), 'R007-002', 0.05);
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (7, TO_DATE('2017-03-08', 'yyyy-mm-dd'), 'R007-003', 0.055);
+INSERT INTO student.sales (customer_id, sales_date, bill_no, discount_percent) VALUES (7, TO_DATE('2017-03-14', 'yyyy-mm-dd'), 'R007-004', 0.05);
