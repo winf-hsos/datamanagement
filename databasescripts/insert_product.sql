@@ -1,4 +1,7 @@
 -- 3 = Softdrinks
+INSERT INTO student.product (id, name, bottle_size_liters, bottles_per_package, age_restriction, alcohol_percent, product_category) VALUES (1, 'Coca Cola', 1, 12, 11,99, 0, 0, null);
+
+/*
 INSERT INTO STUDENT.PRODUCT(ID, NAME, DESCRIPTION, PRODUCT_CATEGORY) VALUES(1, 'Sinalco Cola', 'Kiste mit 24 Flaschen a 0,5 l', 3);
 INSERT INTO STUDENT.PRODUCT(ID, NAME, DESCRIPTION, PRODUCT_CATEGORY) VALUES(2, 'Coca Cola', 'Kiste mit 24 Flaschen a 0,33 l', 3);
 INSERT INTO STUDENT.PRODUCT(ID, NAME, DESCRIPTION, PRODUCT_CATEGORY) VALUES(3, 'Fanta', 'Kiste mit 24 Flaschen a 0,33 l', 3);
@@ -22,3 +25,4 @@ INSERT INTO STUDENT.PRODUCT(ID, NAME, DESCRIPTION, PRODUCT_CATEGORY) VALUES(203,
 INSERT INTO STUDENT.PRODUCT(ID, NAME, DESCRIPTION, PRODUCT_CATEGORY) VALUES(300, 'Hess Claritas Kölsch', '0,66 L Dose', 12);
 INSERT INTO STUDENT.PRODUCT(ID, NAME, DESCRIPTION, PRODUCT_CATEGORY) VALUES(301, 'Mühlen Kölsch', '10 L Fässchen', 12);
 INSERT INTO STUDENT.PRODUCT(ID, NAME, DESCRIPTION, PRODUCT_CATEGORY) VALUES(302, 'Gaffel Kölsch', '10 L Fässchen', 12);
+*/
