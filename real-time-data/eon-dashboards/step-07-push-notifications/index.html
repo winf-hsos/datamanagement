@@ -97,23 +97,24 @@
 
         pubnub.addListener({
             message: function(message) {
+
                 if (message.channel == 'alert_channel') {
 
                     document.getElementById("alert").innerHTML = "<h4>" + message.message.alert + "</h4>";
                     document.getElementById("alert").removeAttribute("hidden");
-
-                    // Send only every 10 seconds
-                    var timeSinceLastNotification = (new Date().getTime()) - lastPushNotification;
-
-                    if (timeSinceLastNotification > 10000) {
-                        sendPushNotification(message.message.alert);
-                    }
 
                     clearTimeout(timeout);
                     timeout = setTimeout(() => {
                         document.getElementById("alert").setAttribute("hidden", "");
                     }, 4000);
 
+
+                    // Send push notification only every 10 seconds
+                    var timeSinceLastNotification = (new Date().getTime()) - lastPushNotification;
+
+                    if (timeSinceLastNotification > 10000) {
+                        sendPushNotification(message.message.alert);
+                    }
                 }
 
             }
