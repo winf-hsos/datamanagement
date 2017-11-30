@@ -1,9 +1,7 @@
  /* global PubNub, eon, pubnub, d3 */
  var pubnub = new PubNub({
-     publishKey: 'pub-c-da11d0a7-08c7-421b-81bb-850fc4e390a1',
-     subscribeKey: 'sub-c-efadf9a2-cfcb-11e7-9f31-2ae01b29664a'
+     subscribeKey: ''
  });
- 
  
  eon.chart({
      pubnub: pubnub,
@@ -40,7 +38,6 @@
          }
      }
  });
-
 
  eon.chart({
      pubnub: pubnub,
@@ -113,7 +110,6 @@
          }
      }
  });
-
 
  eon.chart({
      pubnub: pubnub,

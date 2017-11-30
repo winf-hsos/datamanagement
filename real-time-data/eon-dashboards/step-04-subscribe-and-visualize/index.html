@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="//pubnub.github.io/eon/v/eon/1.0.0/eon.css" />
     <style>
-        h1 {
+        h4 {
             margin-top: 32px;
         }
 
@@ -23,12 +23,7 @@
             stroke-linecap: round;
         }
 
-        .alert-danger {
-            color: #ffffff;
-            background-color: #ea526f;
-            border-color: #8d1129;
-            border-width: 3px;
-        }
+       
     </style>
 </head>
 
@@ -38,8 +33,6 @@
 
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
-                    <h1>Sensor Real Time Dashboard</h1>
-                    <hr>
                     <div class="alert alert-danger fade show" role="alert" id="alert" hidden>
                     </div>
 
@@ -47,27 +40,12 @@
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col text-center">
                     <h4>Temperature</h4>
                     <hr>
                     <div id="chart1"></div>
                 </div>
-                <div class="col">
-                    <h4>CO2</h4>
-                    <hr>
-                    <div id="chart2"></div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <h4>Light</h4>
-                    <hr>
-                    <div id="chart3"></div>
-                </div>
-                <div class="col">
-                    <h4>Air Pressure</h4>
-                    <hr>
-                    <div id="chart4"></div>
-                </div>
+
             </div>
 
 
@@ -83,33 +61,54 @@
 
     <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.js"></script>
     <script type="text/javascript" src="//pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
-    <script type="text/javascript" src="js/charts.js"></script>
+
 
     <script>
-        /* global pubnub, d3 */
+        /* global pubnub, PubNub, eon */
 
-        pubnub.subscribe({
-            channels: ['alert_channel']
+        var pubnub = new PubNub({
+            subscribeKey: ''
         });
 
-        var timeout;
-        pubnub.addListener({
-            message: function(message) {
-                if (message.channel == 'alert_channel') {
+        pubnub.subscribe({
+            channels: ['temperature_channel']
+        });
 
-                    document.getElementById("alert").innerHTML = "<h4>" + message.message.alert + "</h4>";
-                    document.getElementById("alert").removeAttribute("hidden");
-                    console.log(alert);
-
-                    clearTimeout(timeout);
-                    timeout = setTimeout(() => {
-                        document.getElementById("alert").setAttribute("hidden", "");
-                    }, 4000);
-
+        eon.chart({
+            pubnub: pubnub,
+            channels: ['temperature_channel'],
+            limit: 10,
+            generate: {
+                bindto: '#chart1',
+                data: {
+                    colors: { "temperature": "#04a078" },
+                    type: "spline"
+                },
+                axis: {
+                    x: {
+                        type: 'timeseries',
+                        tick: {
+                            format: '%H:%m:%S'
+                        }
+                    },
+                    y: {
+                        tick: {
+                            format: function(d) {
+                                var df = Number(d3.format('.2f')(d));
+                                return df;
+                            }
+                        }
+                    }
                 }
-
+            },
+            transform: function(m) {
+                return {
+                    eon: {
+                        temperature: (m / 100)
+                    }
+                }
             }
-        })
+        });
     </script>
 
 </body>
