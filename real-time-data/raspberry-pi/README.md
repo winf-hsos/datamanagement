@@ -1,8 +1,10 @@
-## Useful commands for the Raspberry Pi
+# Useful commands for the Raspberry Pi
+
+## Setting up wifi from the command line
 
 - [Setting up wifi via the command line](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
 
-Open a terminal on your pi and type the following:
+Conenct your pi via HDMI with a monitor or open an new VPN connection (while in the same network). Now, open a terminal on your pi and type the following:
 
 ```sudo nano /etc/wpa_supplicant/wpa_supplicant.conf```
 
