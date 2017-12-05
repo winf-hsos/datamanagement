@@ -1,6 +1,6 @@
  /* global PubNub, eon, pubnub, d3 */
  var pubnub = new PubNub({
-     subscribeKey: ''
+     subscribeKey: 'sub-c-efadf9a2-cfcb-11e7-9f31-2ae01b29664a'
  });
  
  eon.chart({
@@ -17,7 +17,7 @@
              x: {
                  type: 'timeseries',
                  tick: {
-                     format: '%H:%m:%S'
+                     format: '%H:%M:%S'
                  }
              },
              y: {
@@ -53,7 +53,7 @@
              x: {
                  type: 'timeseries',
                  tick: {
-                     format: '%H:%m:%S'
+                     format: '%H:%M:%S'
                  }
              },
              y: {
@@ -89,7 +89,7 @@
              x: {
                  type: 'timeseries',
                  tick: {
-                     format: '%H:%m:%S'
+                     format: '%H:%M:%S'
                  }
              },
              y: {
@@ -125,7 +125,7 @@
              x: {
                  type: 'timeseries',
                  tick: {
-                     format: '%H:%m:%S'
+                     format: '%H:%M:%S'
                  }
              },
              y: {
