@@ -27,5 +27,31 @@ network={
 }
 ```
 
-Close the nano editor with `Ctrl + X` and confirm that you want to save your changes.
+Close the nano editor with `Ctrl + X` and confirm that you want to save your changes with `Y`.
 
+## Manually starting the node.js application
+
+The application should start when you boot the Raspberry Pi. Howevery, if no sensor values are published you can start the script manually. Connect to your Pi using an HDMI cable or via VPN (while in the same network). Open a new terminal:
+
+### Kill a potentially running process:
+
+```
+ps -xa | grep node
+```
+
+The PID of the process is shown to the left of the table. 
+
+```
+sudo kill <pid>
+```
+
+Replace `<pid>` with the PID you retrieved in the previous step.
+
+### Start the challenge script
+
+```
+cd workspace/tinkerforge-helper/examples
+node challenge2b.js
+```
+
+All connected devices should be found and the RGB light should blink when a new value is fired.
