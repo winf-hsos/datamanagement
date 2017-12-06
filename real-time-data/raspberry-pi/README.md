@@ -55,3 +55,21 @@ node challenge2b.js
 ```
 
 All connected devices should be found and the RGB light should blink when a new value is fired.
+
+## Modify the node application to add a new PubNub account
+
+Sometime you want to change the PubNub account where the sensor values are being published to. Or sometimes, as in the case of challenge 2b, you need to add an additional PubNub account and publish to both. Doing that is easy if you know what you are doing. The following describes the necessary steps.
+
+## Step 1: Open the JS File in a text editor on your Pi
+
+Connect to the UI of Raspberry Pi, either by connecting a monitor via HDMI, or using a VNC client.
+
+Once you are connected to the UI, you can open the file browser, navigate to the location of the JS file you want to edit, and right-click on the file. Now choose "Text Editor" from the context menu.
+
+![How to open a text editor on Raspberry Pi](/media/raspberry-pi-open-text-editor.gif)
+
+The next step depends on what you are trying to do. Goto step 2a if you want to change the PubNub account where your sensor data is sent. Goto step 2b if you want to add one or more PubNub accounts and send the values to both.
+
+## Step 2a: Set the Publish/Subscriber Key
+
+## Step 2b: Add another PubNub account
