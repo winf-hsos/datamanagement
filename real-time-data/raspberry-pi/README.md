@@ -72,4 +72,25 @@ The next step depends on what you are trying to do. Goto step 2a if you want to 
 
 ## Step 2a: Set the Publish/Subscriber Key
 
+You set add a new key pair by simply replacing the current values in this line:
+
+`var pubnub = new PubNubConnector('<your-pub-key>', '<your-sub-key>');`
+
+Restart the Raspberry Pi (or only the node application, see above) and the values are published to the new account.
+
 ## Step 2b: Add another PubNub account
+
+To add a second (or more) PubNub account in addition to the exsiting one, you must add another `PubNubConnector` object. Add another line:
+
+```
+var pubnub = new PubNubConnector('<your-pub-key>', '<your-sub-key>');
+var pubnub2 = new PubNubConnector('<your-2nd-pub-key>', '<your-2nd-sub-key>');
+```
+
+This the first step. Now you need to publish to this new PubNub account wherever it makes sense. For the example above and a channel named `temperature_channel`, the code line to publish looks like this.
+
+```
+pubnub2.publish(value.value, "temperature_channel")
+```
+
+**NOTE:** In the existing code there is an anonymous function declared that executes when the publish process was successful. In our challenge 2b, this function makes the LED blink green. You don't need this for the new PubNub account, although you are free to add this as well. Simply look at the code and understand how it works.
