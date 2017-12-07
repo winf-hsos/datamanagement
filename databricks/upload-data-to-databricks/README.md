@@ -1,6 +1,6 @@
 # Uploading data to Databricks
 
-Databricks Community Edition allows you to store file in the Databricks File System (DBFS). Using the web interface, you can upload files from your local computer to the DBFS. Make sure the file are not too big, as they must go over the internet and large files might take a while.
+Databricks Community Edition allows you to store files in the Databricks File System (DBFS). Using the web interface, you can upload files from your local computer. Make sure the files are not too big, as they must go over the internet, and large files might take a while.
 
 ## Step 1: Sign into Databricks
 
