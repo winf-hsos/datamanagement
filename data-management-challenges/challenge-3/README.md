@@ -62,7 +62,7 @@ Download the file with the reviews [here (220 MB)](https://s3.amazonaws.com/nico
 > **HINT 1**: There are at least 3 distinct problems to mention here. Come up with and describe solutions to solve these problems. You don't have to implement them.
 
 
-## 3.10 - Filter common English stop words to increase the result
+## 3.10 - Filter common English stop words to increase the result!
 
 Download [this file](https://s3.amazonaws.com/nicolas.meseth/amazon_reviews/words.zip) containing a `.csv` file with common English stop words.
 
