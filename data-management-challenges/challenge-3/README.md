@@ -44,7 +44,7 @@ Download the file with the reviews [here (220 MB)](https://s3.amazonaws.com/nico
 
 **HINT 3**: Name the resulting Data Frame `nestleReviews`, cache it, and create a temporary view, as we will continue working with this DF in the next tasks.
 
-## 3.. - Transform the review texts into a new data frame containing a word per record
+## 3.7 - Transform the review texts into a new data frame containing a word per record
 
 **HINT 1**: `split()` is also available as an SQL function
 
