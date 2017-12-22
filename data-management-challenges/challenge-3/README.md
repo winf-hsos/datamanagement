@@ -34,7 +34,7 @@ df.cache()
 
 ## 3.5 - Create a dataframe from the product reviews! How many records does the file contain?
 
-Download the file with the reviews [here (220 MB)](https://s3.amazonaws.com/nicolas.meseth/amazon_reviews/meta_Grocery_and_Gourmet_Food.json.gz). The format is a zipped `.gz`-file containing a JSON file. You don't have to unpack the file. Simply upload the file as is to databricks. Spark will detect that the file is zipped and automatically unzip on reading it.
+Download the file with the reviews [here (220 MB)](https://s3.amazonaws.com/nicolas.meseth/amazon_reviews/reviews_Grocery_and_Gourmet_Food.json.gz). The format is a zipped `.gz`-file containing a JSON file. You don't have to unpack the file. Simply upload the file as is to databricks. Spark will detect that the file is zipped and automatically unzip on reading it.
 
 ## 3.6 - Create a new dataframe containing all review texts for Nestle products! How many reviews do all Nestle products have? 
 
